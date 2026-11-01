@@ -1,0 +1,54 @@
+{
+  "dataset": "male-cns:v1.0",
+  "count": 141781,
+  "brainCount": 124294,
+  "totalAnnotations": 211577,
+  "tracedWithoutSoma": 69796,
+  "selection": "All annotations with measured somaLocation. No invented positions. Studio renderer defaults to optic+central+descending; VNC/other optional.",
+  "coordinateUnits": "8 nm voxels, native MaleCNS EM space",
+  "byteOrder": "little-endian",
+  "files": {
+    "positions": "positions.bin",
+    "ids": "ids.bin",
+    "groups": "groups.bin"
+  },
+  "groups": [
+    {
+      "id": 0,
+      "key": "optic",
+      "color": "#81b5c8",
+      "count": 90810
+    },
+    {
+      "id": 1,
+      "key": "central",
+      "color": "#cfcac0",
+      "count": 32172
+    },
+    {
+      "id": 2,
+      "key": "descending",
+      "color": "#dfb672",
+      "count": 1312
+    },
+    {
+      "id": 3,
+      "key": "vnc",
+      "color": "#af9bc3",
+      "count": 15337
+    },
+    {
+      "id": 4,
+      "key": "other",
+      "color": "#6c7777",
+      "count": 2150
+    }
+  ],
+  "source": "MaleCNS v1.0 body annotations (minconf 0.5)",
+  "exportSha256": {
+    "positions.bin": "4602286346de8bc26cb90f22596f211ed5e611262f81bc80252ca651fbad2c6c",
+    "ids.bin": "35526a9d0ae1031fe5aca585650a19300a70bc3df2295de85f67f13ae2068e17",
+    "groups.bin": "5784627097cb0849129d03b5d9640d1a23e364268cf674914807314dbdd55797"
+  },
+  "license": "MaleCNS data CC-BY 4.0 (Janelia FlyEM / Google / Cambridge)"
+}

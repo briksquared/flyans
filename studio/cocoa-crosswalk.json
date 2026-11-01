@@ -1,0 +1,586 @@
+{
+  "ok": true,
+  "sidecar": "cocoa-crosswalk",
+  "source": {
+    "brains": "brains.json",
+    "maleCnsAnnotations": "MaleCNS v1.0 body annotations (minconf 0.5)",
+    "note": "Local feather + brains.json \u2014 no CAVE pull; graph untouched"
+  },
+  "seats": [
+    "You",
+    "Archive",
+    "Art",
+    "Assistant",
+    "Bass",
+    "Bench"
+  ],
+  "stats": {
+    "bodiesChecked": 30,
+    "typeAgree": 30,
+    "typeAgreeRate": 1.0,
+    "withFlywireType": 29
+  },
+  "samples": [
+    {
+      "seat": "You",
+      "body": 28202,
+      "colonyType": "LPi34",
+      "colonySuperclass": "ol_intrinsic",
+      "mcns": {
+        "type": "LPi34",
+        "superclass": "ol_intrinsic",
+        "flywireType": "LPi09",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "You",
+      "body": 17092,
+      "colonyType": "PLP081",
+      "colonySuperclass": "cb_intrinsic",
+      "mcns": {
+        "type": "PLP081",
+        "superclass": "cb_intrinsic",
+        "flywireType": "PLP081",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "You",
+      "body": 10045,
+      "colonyType": "DNg100",
+      "colonySuperclass": "descending_neuron",
+      "mcns": {
+        "type": "DNg100",
+        "superclass": "descending_neuron",
+        "flywireType": "DNg100",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "You",
+      "body": 10309,
+      "colonyType": "LT1b",
+      "colonySuperclass": "visual_projection",
+      "mcns": {
+        "type": "LT1b",
+        "superclass": "visual_projection",
+        "flywireType": "LT1b",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "You",
+      "body": 521028,
+      "colonyType": "IB018",
+      "colonySuperclass": "cb_intrinsic",
+      "mcns": {
+        "type": "IB018",
+        "superclass": "cb_intrinsic",
+        "flywireType": "IB018",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Archive",
+      "body": 10306,
+      "colonyType": "aMe17e",
+      "colonySuperclass": "visual_centrifugal",
+      "mcns": {
+        "type": "aMe17e",
+        "superclass": "visual_centrifugal",
+        "flywireType": "aMe17a2",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Archive",
+      "body": 35247,
+      "colonyType": "Pm4",
+      "colonySuperclass": "ol_intrinsic",
+      "mcns": {
+        "type": "Pm4",
+        "superclass": "ol_intrinsic",
+        "flywireType": "Pm05",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Archive",
+      "body": 63314,
+      "colonyType": "LC6",
+      "colonySuperclass": "visual_projection",
+      "mcns": {
+        "type": "LC6",
+        "superclass": "visual_projection",
+        "flywireType": "LC6",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Archive",
+      "body": 212939,
+      "colonyType": "L5",
+      "colonySuperclass": "ol_intrinsic",
+      "mcns": {
+        "type": "L5",
+        "superclass": "ol_intrinsic",
+        "flywireType": "L5",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Archive",
+      "body": 525804,
+      "colonyType": "AVLP075",
+      "colonySuperclass": "cb_intrinsic",
+      "mcns": {
+        "type": "AVLP075",
+        "superclass": "cb_intrinsic",
+        "flywireType": "AVLP075",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Art",
+      "body": 555296,
+      "colonyType": "GNG014",
+      "colonySuperclass": "cb_intrinsic",
+      "mcns": {
+        "type": "GNG014",
+        "superclass": "cb_intrinsic",
+        "flywireType": "CB0587",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    },
+    {
+      "seat": "Art",
+      "body": 13612,
+      "colonyType": "Li32",
+      "colonySuperclass": "ol_intrinsic",
+      "mcns": {
+        "type": "Li32",
+        "superclass": "ol_intrinsic",
+        "flywireType": "Li32",
+        "typeAgree": true,
+        "superclassAgree": true
+      }
+    }
+  ],
+  "bySeat": [
+    {
+      "seat": "You",
+      "ok": true,
+      "n": 5,
+      "bodies": [
+        {
+          "body": 28202,
+          "colonyType": "LPi34",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "LPi34",
+            "superclass": "ol_intrinsic",
+            "flywireType": "LPi09",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 17092,
+          "colonyType": "PLP081",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "PLP081",
+            "superclass": "cb_intrinsic",
+            "flywireType": "PLP081",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 10045,
+          "colonyType": "DNg100",
+          "colonySuperclass": "descending_neuron",
+          "mcns": {
+            "type": "DNg100",
+            "superclass": "descending_neuron",
+            "flywireType": "DNg100",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 10309,
+          "colonyType": "LT1b",
+          "colonySuperclass": "visual_projection",
+          "mcns": {
+            "type": "LT1b",
+            "superclass": "visual_projection",
+            "flywireType": "LT1b",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 521028,
+          "colonyType": "IB018",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "IB018",
+            "superclass": "cb_intrinsic",
+            "flywireType": "IB018",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        }
+      ]
+    },
+    {
+      "seat": "Archive",
+      "ok": true,
+      "n": 5,
+      "bodies": [
+        {
+          "body": 10306,
+          "colonyType": "aMe17e",
+          "colonySuperclass": "visual_centrifugal",
+          "mcns": {
+            "type": "aMe17e",
+            "superclass": "visual_centrifugal",
+            "flywireType": "aMe17a2",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 35247,
+          "colonyType": "Pm4",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Pm4",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Pm05",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 63314,
+          "colonyType": "LC6",
+          "colonySuperclass": "visual_projection",
+          "mcns": {
+            "type": "LC6",
+            "superclass": "visual_projection",
+            "flywireType": "LC6",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 212939,
+          "colonyType": "L5",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "L5",
+            "superclass": "ol_intrinsic",
+            "flywireType": "L5",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 525804,
+          "colonyType": "AVLP075",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "AVLP075",
+            "superclass": "cb_intrinsic",
+            "flywireType": "AVLP075",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        }
+      ]
+    },
+    {
+      "seat": "Art",
+      "ok": true,
+      "n": 5,
+      "bodies": [
+        {
+          "body": 555296,
+          "colonyType": "GNG014",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "GNG014",
+            "superclass": "cb_intrinsic",
+            "flywireType": "CB0587",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 13612,
+          "colonyType": "Li32",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Li32",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Li32",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 80950,
+          "colonyType": "TmY4",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "TmY4",
+            "superclass": "ol_intrinsic",
+            "flywireType": "TmY4",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 69825,
+          "colonyType": "Tm2",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Tm2",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Tm2",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 807382,
+          "colonyType": "SNxx01",
+          "colonySuperclass": "vnc_sensory",
+          "mcns": {
+            "type": "SNxx01",
+            "superclass": "vnc_sensory",
+            "flywireType": null,
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        }
+      ]
+    },
+    {
+      "seat": "Assistant",
+      "ok": true,
+      "n": 5,
+      "bodies": [
+        {
+          "body": 10009,
+          "colonyType": "CT1",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "CT1",
+            "superclass": "ol_intrinsic",
+            "flywireType": "CT1",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 29722,
+          "colonyType": "Dm1",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Dm1",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Dm1",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 11008,
+          "colonyType": "SLP388",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "SLP388",
+            "superclass": "cb_intrinsic",
+            "flywireType": "SLP388",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 10277,
+          "colonyType": "AMMC-A1",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "AMMC-A1",
+            "superclass": "cb_intrinsic",
+            "flywireType": "AMMC-A1",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 10468,
+          "colonyType": "GNG144",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "GNG144",
+            "superclass": "cb_intrinsic",
+            "flywireType": "CB3715",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        }
+      ]
+    },
+    {
+      "seat": "Bass",
+      "ok": true,
+      "n": 5,
+      "bodies": [
+        {
+          "body": 11355,
+          "colonyType": "VA1d_adPN",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "VA1d_adPN",
+            "superclass": "cb_intrinsic",
+            "flywireType": "VA1d_adPN",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 69396,
+          "colonyType": "Mi9",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Mi9",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Mi9",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 13686,
+          "colonyType": "SMP549",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "SMP549",
+            "superclass": "cb_intrinsic",
+            "flywireType": "SMP549",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 523564,
+          "colonyType": "PVLP011",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "PVLP011",
+            "superclass": "cb_intrinsic",
+            "flywireType": "PVLP011",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 30639,
+          "colonyType": "L1",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "L1",
+            "superclass": "ol_intrinsic",
+            "flywireType": "L1",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        }
+      ]
+    },
+    {
+      "seat": "Bench",
+      "ok": true,
+      "n": 5,
+      "bodies": [
+        {
+          "body": 21486,
+          "colonyType": "Mi1",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Mi1",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Mi1",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 25996,
+          "colonyType": "L2",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "L2",
+            "superclass": "ol_intrinsic",
+            "flywireType": "L2",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 10860,
+          "colonyType": "Cm31a",
+          "colonySuperclass": "ol_intrinsic",
+          "mcns": {
+            "type": "Cm31a",
+            "superclass": "ol_intrinsic",
+            "flywireType": "Sm40",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 526901,
+          "colonyType": "AVLP005",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "AVLP005",
+            "superclass": "cb_intrinsic",
+            "flywireType": "CB2114",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        },
+        {
+          "body": 11341,
+          "colonyType": "LHCENT2",
+          "colonySuperclass": "cb_intrinsic",
+          "mcns": {
+            "type": "LHCENT2",
+            "superclass": "cb_intrinsic",
+            "flywireType": "LHCENT2",
+            "typeAgree": true,
+            "superclassAgree": true
+          }
+        }
+      ]
+    }
+  ],
+  "compareNote": "Colony readout types vs MaleCNS annotations (incl. flywireType column). Compare-only \u2014 do not overwrite graph."
+}

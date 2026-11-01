@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "sidecar": "colony-analysis",
+  "seat": "Archive",
+  "bodies": [
+    10306,
+    35247,
+    63314,
+    212939,
+    525804,
+    42093,
+    117923,
+    11709,
+    10147,
+    805471,
+    10073,
+    10398
+  ],
+  "mcnsHits": 12,
+  "typeHist": {
+    "VS": 1,
+    "LHAD1g1": 1,
+    "aMe17e": 1,
+    "LT1d": 1,
+    "LPi12": 1,
+    "Pm4": 1,
+    "Tm32": 1,
+    "LC6": 1,
+    "Tm6": 1,
+    "L5": 1,
+    "AVLP075": 1,
+    "GFC1": 1
+  },
+  "superclassHist": {
+    "ol_intrinsic": 5,
+    "visual_projection": 3,
+    "cb_intrinsic": 2,
+    "visual_centrifugal": 1,
+    "vnc_intrinsic": 1
+  },
+  "colonyTypes": [
+    "aMe17e",
+    "Pm4",
+    "LC6",
+    "L5",
+    "AVLP075",
+    "Tm32",
+    "Tm6",
+    "LPi12",
+    "LHAD1g1",
+    "GFC1",
+    "VS",
+    "LT1d"
+  ],
+  "ci": {
+    "version": "2.10.0",
+    "knadenTopAttractive": [
+      {
+        "Odorant": "Butyrolacton",
+        "Attraction index": 0.72
+      },
+      {
+        "Odorant": "4-ethylguaiacol",
+        "Attraction index": 0.7
+      },
+      {
+        "Odorant": "2,3 Butanedione",
+        "Attraction index": 0.62
+      },
+      {
+        "Odorant": "Hexanoic acid",
+        "Attraction index": 0.62
+      },
+      {
+        "Odorant": "Methanoic acid",
+        "Attraction index": 0.62
+      }
+    ],
+    "pathApis": [
+      "find_path_once",
+      "compress_paths",
+      "enumerate_paths"
+    ]
+  },
+  "murthyNotebooks": [
+    "python_scripts/Rank_analysis.ipynb",
+    "python_scripts/reciprocal_space.ipynb",
+    "python_scripts/FlywireAnalysis/v630-Animal-Comparison.ipynb",
+    "python_scripts/FlywireAnalysis/v630-Basic-Stats.ipynb",
+    "python_scripts/FlywireAnalysis/v630-Motif-Analysis.ipynb",
+    "python_scripts/FlywireAnalysis/v630-Proximity-Model.ipynb",
+    "python_scripts/FlywireAnalysis/v630-Rich-Club.ipynb",
+    "python_scripts/FlywireAnalysis/v630-Spectral-Properties.ipynb"
+  ],
+  "compareNote": "Read-only body ID lookup + CI bundled sensory table. Does not load or modify graph edges."
+}

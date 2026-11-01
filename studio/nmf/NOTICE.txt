@@ -1,0 +1,7 @@
+NeuroMechFly simplified meshes, adult female Drosophila, micro-CT.
+
+Source: https://github.com/NeLy-EPFL/flygym
+License: Apache-2.0
+Paper: Lobato-Rios et al., Nature Methods, 2022.
+Segments are capped at 2000 faces. Placed with the published neutral pose
+(yaw, pitch, roll).

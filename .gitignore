@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-build/
+*.asar
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs / scratch
+*.log
+debug.log
+*.err
+dpi-probe.txt
+
+# OS
+Thumbs.db
+.DS_Store

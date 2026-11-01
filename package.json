@@ -1,0 +1,92 @@
+{
+  "name": "flyans",
+  "productName": "FLYANS",
+  "version": "1.0.0",
+  "description": "FLYANS — a living fly-colony observatory for Windows (Electron).",
+  "main": "src/main.js",
+  "author": "briksquared",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "stamp-icon": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stamp-icon.ps1",
+    "dist": "electron-builder --win dir && npm run stamp-icon && electron-builder --win nsis --prepackaged dist/win-unpacked",
+    "dist:dir": "electron-builder --win dir && npm run stamp-icon"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.briksquared.flyans",
+    "productName": "FLYANS",
+    "copyright": "Copyright © briksquared",
+    "electronDist": "node_modules/electron/dist",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "assets/icon.ico",
+      "assets/icon.png",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "studio",
+        "to": "studio",
+        "filter": [
+          "**/*",
+          "!**/node_modules/**",
+          "!**/*.pyc",
+          "!**/__pycache__/**"
+        ]
+      }
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "FLYANS-Setup-${version}.${ext}",
+      "signtoolOptions": {
+        "publisherName": "briksquared"
+      }
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FLYANS",
+      "menuCategory": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "runAfterFinish": false,
+      "deleteAppDataOnUninstall": false,
+      "include": "installer.nsh"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "briksquared",
+        "repo": "flyans",
+        "releaseType": "release"
+      }
+    ]
+  }
+}

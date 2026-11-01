@@ -1,0 +1,387 @@
+:root { color-scheme:dark; --violet:#9a6ad4; --uv:#9a6ad4; }
+body {font-family:'Segoe UI',sans-serif;}
+#lab {box-sizing:border-box;width:308px;padding:16px;background:rgba(10,10,12,.96);border-right:1px solid #2a2a30;scrollbar-width:thin;}
+#lab h2 {font-size:18px;letter-spacing:-.5px;margin:0 0 5px;}
+#lab .quiet {font-size:11px;line-height:1.5;color:#7a7a82;}
+#lab h3 {font-size:11px;margin:14px 0 5px;color:#a8a8b0;}
+#lab button,#community-panel button {border:1px solid #2a2a30;background:#161618;border-radius:6px;padding:5px 8px;line-height:1.3;color:#e8e8ec;}
+#lab button:hover,#community-panel button:hover {background:#1e1e22;}
+#lab button:focus-visible,#community-panel button:focus-visible,#dock button:focus-visible {outline:2px solid #9a6ad4;outline-offset:2px;}
+#roster {max-height:58px;margin:8px 0;gap:4px;}
+#roster button {font-size:10px;padding:3px 5px;}
+#roster button.on {border-color:var(--violet);background:#1a1224;box-shadow:none;}
+#dots {max-height:22px;overflow:auto;gap:3px;margin-top:8px;}
+#dots i {border-radius:50%;width:4px;height:4px;}
+#lab .tiles {display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px 0;}
+#lab .tile {background:#161618;padding:6px;border-radius:6px;}
+#lab .k {display:block;font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:#7a7a82;margin-bottom:3px;}
+#lab .v {display:block;font-size:11px;overflow-wrap:anywhere;}
+#map {height:auto;min-height:180px;border:1px solid #2a2a30;border-radius:12px;background:radial-gradient(ellipse at center,#121214,#050506);}
+#brain3d {touch-action:none;}
+#brain3d canvas {display:block;width:100%;height:100%;border-radius:12px;}
+#brain {cursor:crosshair;}
+#neural-readout {display:block;width:100%;height:auto;margin:8px 0;border:1px solid #2a2a30;border-radius:6px;}
+#neural-readout[hidden] {display:none;}
+#brain-caption {font-size:10px;line-height:1.45;color:#a8a8b0;margin:6px 0;}
+#brain-controls {display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;align-items:center;}
+#brain-mode {max-width:170px;background:#161618;border:1px solid #2a2a30;color:#e8e8ec;border-radius:5px;padding:5px;font:11px 'Segoe UI';}
+#brain-note {width:100%;accent-color:#9a6ad4;}
+#activity-legend {display:flex;flex-wrap:wrap;gap:5px 9px;font-size:10px;color:#a8a8b0;margin-bottom:10px;}
+#activity-legend span::before {content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--color);margin-right:4px;}
+#population {padding:8px 0;border-top:1px solid #222226;color:#a8a8b0;font-size:10px;line-height:1.6;}
+#seats {max-height:65px;scrollbar-width:thin;}
+#lab .seat {font-size:9px;line-height:1.5;}
+#lab canvas.plot {height:44px;}
+#dock {background:rgba(10,10,12,.98);border-top:1px solid #2a2a30;padding:5px 2px;}
+#dock button {font-size:10px;padding:4px 7px;line-height:1.2;border-radius:5px;border-color:#3a3a40;background:#161618;}
+#bar,#orders,#toggles,#groups,#tools,#edit {gap:4px;padding:3px 6px;}
+#toggles {max-height:56px;overflow:auto;}
+#cap {max-width:430px;text-align:right;color:#a8a8b0;}
+#community-panel {position:fixed;right:16px;top:16px;z-index:24;width:322px;max-height:calc(100vh - 260px);overflow:auto;box-sizing:border-box;padding:16px;background:rgba(10,10,12,.98);border:1px solid #2a2a30;border-radius:14px;box-shadow:0 16px 48px #0006;scrollbar-width:thin;}
+#community-panel[hidden] {display:none;}
+#community-panel header {display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font-size:16px;}
+#community-panel p {color:#a8a8b0;line-height:1.5;font-size:11px;}
+#action-search {box-sizing:border-box;width:100%;padding:9px;background:#0a0a0c;color:white;border:1px solid #2a2a30;border-radius:7px;}
+#action-tabs {display:flex;flex-wrap:wrap;gap:5px;margin:10px 0;}
+#action-tabs button {font-size:10px;}
+#action-tabs button.on {background:#1a1224;border-color:#9a6ad4;}
+#action-list {display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+#action-list button {text-align:left;min-height:32px;}
+#action-progress {padding:10px 0;color:#9a6ad4!important;}
+#work-feed {padding-left:14px;font-size:11px;color:#a8a8b0;line-height:1.6;}
+#work-feed li {margin-bottom:6px;}
+#save-state {display:block;color:#7a7a82;font-size:10px;margin-top:10px;}
+.area {max-width:140px;overflow:hidden;text-overflow:ellipsis;background:#101012aa;border-radius:4px;font-family:'Segoe UI',sans-serif;font-size:10px;padding:3px 5px;}
+.area small {font-size:9px;}
+.spectator #community-panel,.spectator #orders,.spectator #groups,.spectator #chat,.spectator #edit,.spectator #hold,.spectator #deskbtn,.spectator #cuts {display:none!important;}
+#world-save {font-size:10px;color:#a8a8b0;margin-left:8px;}
+@media(max-width:850px){#lab{width:250px;padding:10px;}#map{height:160px;}#community-panel{right:8px;width:290px;max-height:calc(100vh - 285px);}#dock button{font-size:9px;padding:3px 5px;}#cap{display:none;}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
+#local-command-form label {display:block;font-size:12px;margin-bottom:7px;}
+.command-row {display:flex;gap:5px;}
+#local-command {min-width:0;flex:1;padding:8px;background:#0a0a0c;border:1px solid #3a3a40;color:white;border-radius:5px;}
+#command-result {white-space:pre-wrap;overflow-wrap:anywhere;}
+#community-panel details {border-top:1px solid #2a2a30;padding:10px 0;margin-top:10px;}
+#community-panel summary {cursor:pointer;font-size:13px;margin-bottom:10px;}
+#planner-controls label {display:block;font-size:12px;margin:10px 0;line-height:1.5;}
+#planner-controls select,#planner-controls input[type=number] {background:#161618;color:white;border:1px solid #2a2a30;border-radius:4px;padding:5px;max-width:160px;}
+#planner-controls input[type=number] {width:55px;}
+#local-update-status {font-size:10px;color:#a9a0ba;margin-left:6px;}
+#neuron-inspector {font-size:11px;line-height:1.5;padding:8px 0;color:#a8a8b0;}
+#neuron-inspector[hidden] {display:none;}
+#neuron-inspector select {width:100%;margin:5px 0;background:#161618;color:white;border:1px solid #2a2a30;padding:5px;}
+#neuron-inspector a {color:#9a6ad4;font-size:10px;}
+#active-work {padding-left:16px;font-size:11px;line-height:1.7;color:#a8a8b0;}
+#active-work li {margin-bottom:6px;}
+#community-panel>details>label {display:block;font-size:12px;line-height:1.8;margin:6px 0;}
+#lab .quiet,#lab .v,#brain-caption,#neuron-inspector,#community-panel p,#work-feed,#active-work {font-size:var(--reading-size,11px);}
+#neuron-inspector select {font-size:var(--reading-size,11px);}
+
+#community-stats {border-bottom:1px solid #222226;padding-bottom:10px;margin-bottom:12px;}
+.stats-heading {display:flex;align-items:center;justify-content:space-between;gap:8px;}
+#lab .stats-heading h2 {font-size:16px;}
+#stats-state {font-size:10px;color:#9a6ad4;}
+.stats-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:8px 0;}
+.stats-grid>div {background:#161618;border-radius:6px;padding:7px 6px;}
+.stats-grid dt {font-size:10px;color:#a8a8b0;line-height:1.3;}
+.stats-grid dd {margin:4px 0 0;font-size:20px;line-height:1.1;color:#e8e8ec;font-variant-numeric:tabular-nums;}
+#stats-details summary {cursor:pointer;font-size:11px;color:#a8a8b0;padding:3px 0;}
+.stats-detail-list {margin:7px 0 0;font-size:11px;}
+.stats-detail-list>div {display:flex;justify-content:space-between;gap:10px;line-height:1.8;}
+.stats-detail-list dt {color:#a8a8b0;}
+.stats-detail-list dd {margin:0;text-align:right;font-variant-numeric:tabular-nums;}
+#lab .tiles {gap:4px;padding:4px 0;}
+#population {padding:4px 0;font-size:10px;}
+/* Dots restored: one square per fly, brighter when working (toggle: Dots button). */
+#lab #dots {display:flex;}
+#research-notebook {padding-left:16px;font-size:var(--reading-size,11px);line-height:1.6;color:#a8a8b0;}
+#research-notebook li {margin-bottom:6px;}
+#maint-log-panel {margin-top:8px;}
+#maint-log {padding-left:16px;font-size:11px;line-height:1.55;color:#a8a8b0;max-height:160px;overflow:auto;}
+#maint-log li {margin-bottom:4px;}
+#world-versions {padding:12px;border:1px solid #776d50;margin-bottom:12px;background:#242820;color:#ede6d4}
+#world-versions summary {cursor:pointer;font-weight:bold}
+#world-versions p {line-height:1.5;font-size:12px}
+#world-versions input,#world-versions select {box-sizing:border-box;width:100%;margin:6px 0;padding:7px;background:#151b16;color:#ede6d4;border:1px solid #71684f}
+#world-versions button {margin:4px;padding:6px}
+
+/* Compact community controls — text must fit boxes (no 14px force that overflows). */
+#community-panel {color:#e8e8ec;background:#101012;width:min(300px,calc(100vw - 24px));top:12px;right:12px;max-height:calc(100dvh - 190px);font-size:11px;line-height:1.4;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;}
+#community-panel header {color:#fff;font-size:13px;position:sticky;top:-12px;background:#101012;padding:6px 0;z-index:2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#community-panel :is(p,label,summary,li,small,h3),#community-panel>details>label,#planner-controls label,#local-command-form label {font-size:var(--reading-size,11px);color:#c8c8d0;line-height:1.4;}
+#community-panel :is(h3,summary) {color:#e8e8ec;font-weight:600;font-size:11px;}
+#community-panel button,#action-tabs button {font-size:11px;line-height:1.25;min-height:28px;padding:5px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;box-sizing:border-box;}
+#community-panel :is(input,select) {font:inherit;font-size:11px;color:#e8e8ec;background:#161618;border:1px solid #3a3a40;border-radius:5px;max-width:100%;box-sizing:border-box;}
+#community-panel :is(input:not([type=checkbox]):not([type=range]),select) {min-height:28px;padding:4px 6px;}
+#community-panel input::placeholder {color:#7a7a82;opacity:1;}
+#community-panel input[type=range] {display:block;width:100%;accent-color:#9a6ad4;}
+#community-panel input[type=checkbox] {accent-color:#9a6ad4;}
+#community-panel :is(#work-feed,#active-work,#research-notebook,#save-state) {font-size:11px;color:#c8c8d0;overflow-wrap:anywhere;}
+#community-panel details button {margin:2px;}
+#community-panel select {width:100%;}
+#community-panel .command-row {align-items:stretch;gap:6px;min-width:0;}
+#community-panel #local-command {font-size:11px;width:0;min-width:0;flex:1;}
+#community-panel #design-teams {padding:8px;background:#161618;border-radius:7px;}
+#community-panel .ui-repaired {color:#e8e8ec!important;background-color:#161618!important;font-size:11px!important;}
+#action-list {display:grid;grid-template-columns:1fr 1fr;gap:6px;min-width:0;}
+#action-list button {min-width:0;}
+@media(max-width:600px){#community-panel{max-height:calc(100dvh - 220px);padding:10px;}#action-list{grid-template-columns:1fr;}}
+
+/* ============================================================
+   Professional polish layer — unified tokens, surfaces, states.
+   Appended last so it refines the panels without a full rewrite.
+   ============================================================ */
+:root{
+  --surface-0:#0a0a0c; --surface-1:#101012; --surface-2:#161618;
+  --surface-hi:#1e1e22; --line:#2a2a30; --line-soft:#222226;
+  --ink:#e8e8ec; --ink-dim:#a8a8b0; --ink-mute:#7a7a82;
+  --accent:#9a6ad4; --accent-deep:#6e4a9a; --accent-soft:#1a1224;
+  --radius:10px; --radius-lg:16px; --shadow:0 18px 50px rgba(0,0,0,.55);
+  --ring:0 0 0 2px rgba(154,106,212,.35);
+}
+#lab,#community-panel{background:var(--surface-1);border-color:var(--line);}
+#lab{box-shadow:inset -1px 0 0 rgba(255,255,255,.02);}
+#community-panel{border-radius:var(--radius-lg);box-shadow:var(--shadow);}
+#community-panel header,#lab h2{letter-spacing:-.3px;}
+#lab h3,.stats-heading h2{text-transform:uppercase;letter-spacing:.09em;font-weight:600;color:var(--ink-mute);font-size:10.5px;}
+#community-panel h3{text-transform:uppercase;letter-spacing:.09em;font-size:11px;color:var(--ink-mute);}
+
+/* Buttons: one calm resting state, clear hover/active, consistent radius */
+#lab button,#community-panel button,#dock button,#action-tabs button{
+  background:var(--surface-2);border:1px solid var(--line);color:var(--ink);
+  border-radius:8px;transition:background .13s ease,border-color .13s ease,transform .05s ease;
+}
+#lab button:hover,#community-panel button:hover,#dock button:hover,#action-tabs button:hover{
+  background:var(--surface-hi);border-color:var(--accent-deep);
+}
+#lab button:active,#community-panel button:active,#dock button:active{transform:translateY(1px);}
+#lab button:focus-visible,#community-panel button:focus-visible,#dock button:focus-visible,
+#community-panel :is(input,select):focus-visible{outline:none;box-shadow:var(--ring);border-color:var(--accent);}
+#roster button.on,#action-tabs button.on{
+  background:linear-gradient(180deg,var(--accent-soft),#1a1224);
+  border-color:var(--accent);color:#fff;
+}
+
+/* Action list reads as tidy chips */
+#action-list button{background:var(--surface-2);border:1px solid var(--line-soft);border-radius:8px;
+  padding:9px 10px;line-height:1.35;}
+#action-list button:hover{border-color:var(--accent-deep);}
+
+/* Command box: primary action gets the accent */
+#local-command{background:var(--surface-0);border:1px solid var(--line);border-radius:8px;}
+.command-row button[type=submit],#local-command-form button[type=submit]{
+  background:linear-gradient(180deg,var(--accent),var(--accent-deep));border-color:transparent;color:#160f22;font-weight:600;
+}
+.command-row button[type=submit]:hover{filter:brightness(1.06);background:linear-gradient(180deg,var(--accent),var(--accent-deep));}
+
+/* Inputs share one surface + border */
+#action-search,#planner-controls select,#planner-controls input,
+#community-panel :is(input,select),#brain-mode{background:var(--surface-0);border:1px solid var(--line);border-radius:8px;}
+
+/* Stat tiles: quieter labels, crisp numerals, subtle separation */
+.stats-grid>div,#lab .tile{background:var(--surface-2);border:1px solid var(--line-soft);border-radius:10px;}
+.stats-grid dt,#lab .k{color:var(--ink-mute);text-transform:uppercase;letter-spacing:.07em;}
+.stats-grid dd{color:var(--ink);font-weight:600;}
+
+/* Feeds and dividers */
+#community-panel details{border-top:1px solid var(--line-soft);}
+#population{border-top:1px solid var(--line-soft);}
+#map{border:1px solid var(--line);}
+
+/* Slimmer, on-theme scrollbars */
+#lab,#community-panel,#seats,#toggles,#roster,#dots{scrollbar-color:var(--accent-deep) transparent;}
+#lab::-webkit-scrollbar,#community-panel::-webkit-scrollbar{width:9px;height:9px;}
+#lab::-webkit-scrollbar-thumb,#community-panel::-webkit-scrollbar-thumb{background:var(--accent-soft);border-radius:9px;border:2px solid var(--surface-1);}
+#lab::-webkit-scrollbar-thumb:hover,#community-panel::-webkit-scrollbar-thumb:hover{background:var(--accent-deep);}
+
+/* ============================================================
+   Beautify round 2 — cards, command console, feeds, headings.
+   ============================================================ */
+#community-panel{background:linear-gradient(180deg,#121214,#0a0a0c);border:1px solid #2a2a30;}
+#community-panel header{background:linear-gradient(180deg,#121214,#0a0a0c);border-bottom:1px solid #2a2a30;padding:12px 0;margin-bottom:14px;}
+
+/* Group each section into a soft card */
+#community-panel details,#planner-controls,#community-stats{
+  background:rgba(255,255,255,.022);border:1px solid var(--line-soft);
+  border-radius:12px;padding:11px 12px;margin:10px 0;
+}
+#community-panel details{border-top:1px solid var(--line-soft);}
+
+/* Custom disclosure caret */
+#community-panel summary{list-style:none;display:flex;align-items:center;gap:7px;}
+#community-panel summary::-webkit-details-marker{display:none;}
+#community-panel summary::before{content:"›";color:var(--accent);font-size:15px;line-height:1;transition:transform .15s ease;display:inline-block;}
+#community-panel details[open]>summary::before{transform:rotate(90deg);}
+
+/* Section headings get a small accent tick */
+#lab h3,#community-panel h3{display:flex;align-items:center;gap:7px;}
+#lab h3::before,#community-panel h3::before{content:"";width:3px;height:11px;border-radius:2px;background:linear-gradient(var(--accent),var(--accent-deep));flex:none;}
+
+/* Command console: input + Run read as one bar */
+.command-row{background:var(--surface-0);border:1px solid var(--line);border-radius:10px;padding:4px;gap:4px;align-items:stretch;}
+.command-row:focus-within{box-shadow:var(--ring);border-color:var(--accent);}
+.command-row #local-command,#community-panel .command-row #local-command{background:transparent;border:none;padding:8px 10px;}
+.command-row #local-command:focus-visible{box-shadow:none;outline:none;}
+
+/* Feeds get a quiet left rail */
+#work-feed,#active-work,#research-notebook{list-style:none;padding-left:0;}
+#work-feed li,#active-work li,#research-notebook li{
+  border-left:2px solid var(--accent-soft);padding-left:10px;margin-bottom:7px;
+}
+
+/* Command result reads as a status line */
+#command-result{background:var(--surface-0);border:1px solid var(--line-soft);border-radius:8px;padding:8px 10px;margin-top:8px;color:var(--ink-dim);min-height:1em;}
+
+/* Compose-suggestion chips: smaller, quieter */
+#local-command-form + details button{font-size:12px;min-height:0;padding:5px 9px;background:var(--surface-1);}
+#local-command-form + details button:hover{background:var(--surface-hi);}
+
+/* ============================================================
+   Quick command bar (bottom dock) + quick-run toast.
+   ============================================================ */
+#quickbar{display:flex;flex-wrap:wrap;align-items:center;gap:5px 10px;
+  padding:8px 8px;margin-bottom:4px;border-bottom:1px solid var(--line,#2a2a30);
+  background:linear-gradient(180deg,rgba(154,106,212,.08),transparent);}
+#quickbar .qb-group{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px;
+  padding-right:10px;border-right:1px solid var(--line-soft,#222226);}
+#quickbar .qb-group:last-child{border-right:none;}
+#quickbar .qb-group b{font-size:9px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--accent,#9a6ad4);margin-right:3px;opacity:.9;}
+#quickbar button{font-size:11px;line-height:1.1;padding:5px 9px;border-radius:7px;
+  background:var(--surface-2,#161618);border:1px solid var(--line-soft,#222226);color:var(--ink,#e8e8ec);
+  transition:background .12s ease,border-color .12s ease,transform .05s ease;white-space:nowrap;}
+#quickbar button:hover{background:var(--surface-hi,#1e1e22);border-color:var(--accent-deep,#6e4a9a);}
+#quickbar button:active{transform:translateY(1px);}
+#quickbar button:focus-visible{outline:none;box-shadow:var(--ring,0 0 0 2px rgba(154,106,212,.35));border-color:var(--accent,#9a6ad4);}
+.spectator #quickbar{display:none!important;}
+
+#quick-toast{position:fixed;left:50%;bottom:calc(var(--dock-h,180px));transform:translate(-50%,10px);
+  z-index:60;max-width:min(560px,92vw);padding:10px 16px;border-radius:10px;
+  background:rgba(10,10,12,.97);border:1px solid var(--accent-deep,#6e4a9a);color:var(--ink,#e8e8ec);
+  font:13px 'Segoe UI',sans-serif;line-height:1.4;box-shadow:0 12px 34px rgba(0,0,0,.5);
+  opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;text-align:center;}
+#quick-toast.show{opacity:1;transform:translate(-50%,0);}
+
+/* Compact quick bar — smaller buttons/text so they take less room. */
+#quickbar{gap:3px 7px;padding:6px 8px;}
+#quickbar .qb-group{gap:3px;padding-right:7px;}
+#quickbar .qb-group b{font-size:8px;margin-right:2px;}
+#quickbar button{font-size:9.5px;padding:3px 6px;border-radius:6px;line-height:1.1;}
+
+/* Even smaller quick buttons; pack the bar tight with no wasted space. */
+#quickbar{gap:2px 6px;padding:5px 7px;}
+#quickbar .qb-group{gap:2px;padding-right:6px;}
+#quickbar button{font-size:9px;padding:2px 5px;border-radius:5px;}
+
+/* Quick-bar collapse toggle + universal click feedback (.lit) for dock buttons. */
+#quickbar-toggle{display:block;width:100%;text-align:left;font-size:10px;letter-spacing:.05em;
+  padding:4px 8px;margin:0 0 2px;background:var(--surface-2,#161618);color:var(--ink-dim,#a8a8b0);
+  border:none;border-bottom:1px solid var(--line,#2a2a30);border-radius:0;cursor:pointer;}
+#quickbar-toggle:hover{color:var(--accent,#9a6ad4);}
+#quickbar-filter-wrap{display:flex;align-items:center;gap:6px;padding:4px 8px 6px;
+  border-bottom:1px solid var(--line,#2a2a30);background:rgba(0,0,0,.25);}
+#quickbar-filter-wrap .qb-filter-label{font-size:9px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--accent,#9a6ad4);flex:0 0 auto;}
+#quickbar-filter{flex:1 1 auto;min-width:0;font:11px/1.2 system-ui,sans-serif;color:var(--ink,#e8e8ec);
+  background:var(--surface-2,#161618);border:1px solid var(--line-soft,#222226);border-radius:6px;
+  padding:5px 8px;outline:none;}
+#quickbar-filter:focus{border-color:var(--accent-deep,#6e4a9a);box-shadow:var(--ring,0 0 0 2px rgba(154,106,212,.25));}
+#quickbar-filter-wrap kbd{font:600 10px/1 ui-monospace,monospace;padding:2px 5px;border-radius:3px;
+  background:#141414;border:1px solid #333;color:#888;flex:0 0 auto;}
+#quickbar .qb-group.qb-empty{display:none!important;}
+#quickbar button.qb-hide{display:none!important;}
+#dock.quickbar-collapsed #quickbar,
+#dock.quickbar-collapsed #quickbar-filter-wrap{display:none;}
+#dock.minimized #quickbar-filter-wrap{display:none!important;}
+#dock-minimize{align-self:flex-end;margin:0 6px 2px;padding:3px 9px;min-width:112px;}
+#dock.minimized{padding:2px;background:rgba(10,10,12,.9);border-top-color:#2a2a30;}
+#dock.minimized>:not(#dock-minimize){display:none!important;}
+#dock.minimized #dock-minimize{margin:0 6px 0 auto;}
+#dock button.lit{background:var(--accent,#9a6ad4)!important;color:#160f22!important;border-color:var(--accent,#9a6ad4)!important;
+  box-shadow:0 0 0 2px rgba(184,146,244,.35);transition:none;}
+
+/* Rearrangeable sidebar (drag panels, then lock). */
+#sidebar-arrange-bar{display:flex;gap:6px;margin:0 0 10px;}
+#sidebar-arrange-bar button{flex:1;font-size:11px;padding:6px 8px;border-radius:8px;
+  background:var(--surface-2,#161618);color:var(--ink-dim,#a8a8b0);border:1px solid var(--line,#2a2a30);cursor:pointer;}
+#sidebar-arrange-bar button:hover{color:var(--accent,#9a6ad4);border-color:var(--accent-deep,#6e4a9a);}
+#lab.arranging > *{outline:1px dashed var(--accent-deep,#6e4a9a);outline-offset:3px;cursor:grab;border-radius:8px;}
+#lab.arranging > #sidebar-arrange-bar{outline:none;cursor:default;}
+#lab > .dragging{opacity:.45;cursor:grabbing;}
+
+/* Camera panel (feel controls + auto-tour presets). */
+#camera-panel label{display:block;font-size:11px;margin:7px 0;line-height:1.5;color:var(--ink-dim,#a8a8b0);}
+#camera-panel input[type=range]{width:100%;accent-color:var(--accent,#9a6ad4);margin-top:3px;}
+#camera-panel input[type=checkbox]{accent-color:var(--accent,#9a6ad4);margin-right:6px;}
+#tour-buttons{display:flex;flex-wrap:wrap;gap:4px;margin:9px 0;}
+#tour-buttons button{font-size:10px;padding:4px 8px;border-radius:7px;
+  background:var(--surface-2,#161618);border:1px solid var(--line,#2a2a30);color:var(--ink,#e8e8ec);cursor:pointer;}
+#tour-buttons button:hover{border-color:var(--accent-deep,#6e4a9a);}
+#tour-buttons button.on{background:linear-gradient(180deg,var(--accent-soft,#1a1224),#1a1224);border-color:var(--accent,#9a6ad4);color:#fff;}
+#lab .sidebar-section,#lab>#camera-panel{border:1px solid #2a2a30;border-radius:8px;margin:8px 0;padding:9px;background:#161618;}
+#lab>.sidebar-section>summary,#lab>#camera-panel>summary{font-size:14px;color:#e8e8ec;font-weight:600;cursor:pointer;line-height:1.6;}
+#sidebar-fold-controls{display:flex;gap:6px;position:sticky;top:0;background:#0a0a0c;z-index:3;padding:5px 0;}
+#live-telemetry{font-size:12px;line-height:1.6;color:#c8c8d0;overflow-wrap:anywhere;}
+#roster button.pick{background:#5a4219;border:2px solid #ffcf65;color:#fff;}
+
+/* ============================================================
+   Smaller GUI text + minimize buttons on every panel/section.
+   ============================================================ */
+#lab { font-size: 10.5px; }
+#lab h2 { font-size: 15px; }
+#lab h2#labname { font-size: 13.5px; }
+#lab h3, .stats-heading h2 { font-size: 10px; }
+#community-panel :is(p,label,summary,li,small,h3),
+#community-panel>details>label,#planner-controls label,#local-command-form label { font-size: max(12px, var(--reading-size,12px)) !important; }
+#community-panel header { font-size: 15px !important; }
+#community-panel button, #action-tabs button { font-size: 12px !important; min-height: 30px !important; }
+#community-panel #local-command { font-size: 12px; }
+#quickbar button { font-size: 8.5px; padding: 2px 5px; }
+#quickbar .qb-group b { font-size: 8px; }
+#dock button { font-size: 9px; }
+
+/* Per-section minimize (sidebar) */
+#lab [data-collapsible] { position: relative; }
+#lab .min-btn { position: absolute; top: 3px; right: 3px; width: 20px; height: 18px; line-height: 1;
+  padding: 0; font-size: 13px; border-radius: 5px; background: var(--surface-2,#161618);
+  border: 1px solid var(--line,#2a2a30); color: var(--ink-dim,#a8a8b0); z-index: 4; cursor: pointer; }
+#lab .min-btn:hover { color: var(--accent,#9a6ad4); border-color: var(--accent-deep,#6e4a9a); }
+#lab .min > :not(.min-btn):not(h2):not(h3):not(.stats-heading) { display: none !important; }
+#lab .min { padding-bottom: 2px; opacity: .92; }
+#sidebar-arrange-bar button { flex: 1; }
+
+/* Actions panel minimize (collapse to its header) */
+#community-panel.min { max-height: none !important; }
+#community-panel.min > :not(header) { display: none !important; }
+#community-panel .panel-min-btn { margin-left: 8px; font-size: 14px; padding: 2px 9px; line-height: 1; }
+
+/* Simplified Save & load panel */
+#world-versions .save-controls{display:flex;gap:6px;align-items:center;margin:8px 0;}
+#world-versions .save-controls input,#world-versions .save-controls select{flex:1;min-width:0;margin:0;}
+#world-versions .save-controls button{flex:none;white-space:nowrap;padding:6px 10px;}
+#world-versions #version-save-now{width:100%;margin-top:2px;}
+#world-versions button{cursor:pointer;}
+
+/* ============================================================
+   COMPACT SIDEBAR (user request): shrink every #lab item so the
+   left panel reads tight, not oversized. Appended last + !important
+   so it wins over the base + polish layers above.
+   ============================================================ */
+#lab{width:224px!important;padding:9px!important;}
+#lab h2{font-size:13px!important;margin:0 0 3px!important;}
+#lab h3,.stats-heading h2,#lab .stats-heading h2{font-size:10px!important;margin:7px 0 3px!important;}
+#lab summary,.sidebar-section>summary,#stats-details summary{font-size:11px!important;padding:2px 0!important;}
+#lab button,#lab select,#lab input{font-size:10px!important;padding:3px 6px!important;min-height:0!important;}
+#lab .quiet{font-size:9px!important;line-height:1.35!important;}
+#lab .tile{padding:4px!important;}#lab .k{font-size:8px!important;}#lab .v{font-size:10px!important;}
+.stats-grid{gap:4px!important;margin:5px 0!important;}
+.stats-grid>div{padding:5px!important;}
+.stats-grid dt{font-size:9px!important;}
+.stats-grid dd{font-size:15px!important;margin:2px 0 0!important;}
+.stats-detail-list{font-size:10px!important;}
+.stats-detail-list>div{line-height:1.45!important;}
+#population{font-size:9px!important;line-height:1.5!important;}
+#lab .seat{font-size:9px!important;}
+#lab p,#lab label,#lab li{font-size:10px!important;line-height:1.35!important;}
+
+body.nogui #lab-resize{display:none!important;}

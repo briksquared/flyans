@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>FLYANS</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 55% at 50% 110%, rgba(154, 106, 212, 0.28) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(232, 200, 106, 0.08) 0%, transparent 50%),
+        linear-gradient(165deg, #1a0f28 0%, #0a0612 48%, #050308 100%);
+      color: #e8dcc8;
+      font-family: "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      -webkit-app-region: drag;
+    }
+    .mark {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      margin-bottom: 20px;
+    }
+    .mark img {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow:
+        0 0 0 1px rgba(232, 200, 106, 0.22),
+        0 12px 36px rgba(0, 0, 0, 0.55);
+      display: block;
+    }
+    .mark::after {
+      content: "";
+      position: absolute;
+      inset: -10px;
+      border-radius: 28px;
+      background: radial-gradient(circle, rgba(154, 106, 212, 0.35), transparent 70%);
+      z-index: -1;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.45; transform: scale(0.96); }
+      50% { opacity: 0.9; transform: scale(1.04); }
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.32em;
+      font-weight: 600;
+      color: #f3ead8;
+      padding-left: 0.32em;
+    }
+    .sub {
+      margin: 8px 0 0;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232, 200, 106, 0.72);
+    }
+    #rite {
+      margin: 22px 24px 0;
+      max-width: 340px;
+      min-height: 2.6em;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.45;
+      letter-spacing: 0.03em;
+      color: rgba(232, 220, 200, 0.92);
+      font-family: Candara, "Segoe UI", sans-serif;
+      font-weight: 500;
+      transition: opacity 0.55s ease;
+    }
+    #tech {
+      margin: 10px 0 0;
+      min-height: 1em;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: rgba(160, 150, 170, 0.55);
+      font-family: Candara, "Segoe UI", sans-serif;
+    }
+    .bar {
+      margin-top: 16px;
+      width: 200px;
+      height: 2px;
+      border-radius: 2px;
+      background: rgba(232, 200, 106, 0.12);
+      overflow: hidden;
+    }
+    .bar > i {
+      display: block;
+      height: 100%;
+      width: 36%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #9a6ad4, #e8c86a, #9a6ad4);
+      background-size: 200% 100%;
+      animation: slide 1.15s ease-in-out infinite;
+    }
+    @keyframes slide {
+      0% { transform: translateX(-110%); }
+      100% { transform: translateX(320%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mark::after, .bar > i { animation: none; }
+      #rite { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mark"><img src="../assets/icon.png" alt="" /></div>
+  <h1>FLYANS</h1>
+  <p class="sub">Colony observatory</p>
+  <p id="rite">Awakening the colony…</p>
+  <p id="tech"></p>
+  <div class="bar"><i></i></div>
+  <script>
+    const SAYINGS = [
+      "Awakening the colony…",
+      "Summoning Za’Kuun from the stars…",
+      "The elder ships are landing…",
+      "Warming the resin, pouring the walls…",
+      "Ten thousand wings, one mind…",
+      "Reading the calendar of days…",
+      "Lighting the temple fires…",
+      "The shaman climbs to the vision…",
+      "Raising limestone beneath two moons…",
+      "For the glory of insect-kind…",
+      "Teaching the swarm to build…",
+      "Aligning the roads to the sun…",
+      "The hive remembers everything…",
+      "Descending on the landing pad…",
+      "Counting the stars above the citadel…",
+      "Waking thirty thousand years of dust…",
+      "Polishing the great sun-stone…",
+      "The colony gathers to worship…",
+      "Terracing the mountaintop…",
+      "Charting the coming eclipse…",
+      "The first builders return…",
+      "Carving glyphs into the dark…",
+      "Setting the swarm to work…",
+      "Za’Kuun stirs in the deep…",
+      "Anointing the sacred roads…",
+      "The chosen wings gather at the altar…",
+      "All land is holy; all roads are holy…",
+      "Pouring molten resin into the moulds…",
+      "The prophecy of the tenth moon…",
+      "Ten thousand devotees kneel as one…",
+      "The great mind dreams the city…",
+      "Blessing the newborn drones…",
+      "Feathered serpents circle the spires…",
+      "The elders whisper through the hive…",
+      "Aligning every stone to the meridian…",
+      "Kindling the eternal brazier…",
+      "The swarm ascends toward the light…",
+      "Grinding jade for the sun-disc…",
+      "Reciting the names of the fallen queens…",
+      "The comet returns to bless the harvest…",
+      "Every fly a priest, every home a shrine…",
+      "The symmetry of the gods takes shape…",
+      "Llamas bow before the winged ones…",
+      "Weaving starlight into the calendar…",
+      "The colony holds its breath…",
+      "Consecrating the ground beneath us…",
+      "The hive-song rises over the valley…",
+      "Sharpening obsidian for the rite…",
+      "The two moons align above the temple…",
+      "Awaiting the descent of the elder ships…",
+      "One will, ten thousand wings…",
+      "Surveying the neighbourhoods beyond the pyramids…",
+      "Guiding the houses to their new districts…",
+      "The warehouse keeps its secrets…",
+      "Mapping the sacred corridor to the South Temple…",
+      "Rolling the great sun-stone into place…",
+      "The drones dream of clear blue resin…",
+      "Calibrating the eyes of ten thousand flies…",
+      "Each brain a tiny galaxy of thought…",
+      "Pollinating the hanging gardens…",
+      "The queen's hymn echoes down the causeway…",
+      "Folding wings for the long procession…",
+      "Numbering the tiers of every temple…",
+      "The jaguar-priests take their stations…",
+      "Alpacas graze beneath the glass roofs…",
+      "The condor spirals over the citadel…",
+      "Measuring shadows against the gnomon…",
+      "The resin cools to a cold blue fire…",
+      "Sweeping the plaza for the festival…",
+      "Threading canals through the valley…",
+      "The elder-mind counts us, and is pleased…",
+      "Setting every rooftop toward the dawn…",
+      "The scribes ink the census of wings…",
+      "Tuning the drums for the equinox…",
+      "A thousand lanterns for the night market…",
+      "The hatchlings learn the names of the stars…",
+      "Burnishing gold for the serpent's eyes…",
+      "The river finds its ancient channel…",
+      "Raising the dormitories out east…",
+      "The council of elders convenes in the deep…",
+      "Oiling the hinges of the sky-gates…",
+      "Every shop in its ordered place…",
+      "The wellness halls open their doors…",
+      "Blessing the markets of the north-east…",
+      "The swarm aligns to a single heartbeat…",
+      "Dust of thirty thousand years, settle…",
+      "The moons rehearse their eclipse…",
+      "We build, therefore we are…",
+      "The last stone finds its symmetry…",
+      "Opening the gates of the resin city…"
+    ];
+
+    (function cycleRites() {
+      const el = document.getElementById('rite');
+      if (!el) return;
+      const list = SAYINGS.slice();
+      for (let i = list.length - 1; i > 0; i--) {
+        const j = (Math.random() * (i + 1)) | 0;
+        const tmp = list[i];
+        list[i] = list[j];
+        list[j] = tmp;
+      }
+      let si = 0;
+      el.textContent = list[0];
+      setInterval(() => {
+        si = (si + 1) % list.length;
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.textContent = list[si];
+          el.style.opacity = '1';
+        }, 550);
+      }, 4200);
+    })();
+
+    // Quiet tech line only — never replaces the ritual sayings.
+    if (window.FLYANS?.onSplashStatus) {
+      window.FLYANS.onSplashStatus((msg) => {
+        const el = document.getElementById('tech');
+        if (!el || !msg) return;
+        el.textContent = String(msg);
+      });
+    }
+  </script>
+</body>
+</html>
